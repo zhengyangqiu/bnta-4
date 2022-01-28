@@ -1,5 +1,7 @@
 package com.bnta.exercise.week2_tues;
 
+import org.w3c.dom.ls.LSOutput;
+
 public class Exercise6 {
 
     //Write a method which takes an array of strings as an argument and returns the number of items in the array.
@@ -22,6 +24,7 @@ public class Exercise6 {
 
 
     }
+    
 
 
 }
