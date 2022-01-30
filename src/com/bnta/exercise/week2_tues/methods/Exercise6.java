@@ -1,4 +1,4 @@
-package com.bnta.exercise.week2_tues;
+package com.bnta.exercise.week2_tues.methods;
 
 import org.w3c.dom.ls.LSOutput;
 
