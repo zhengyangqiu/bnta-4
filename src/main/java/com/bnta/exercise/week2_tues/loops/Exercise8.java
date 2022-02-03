@@ -12,6 +12,13 @@ public class Exercise8 {
 
         String[] arr={"i", "sure", "do", "love", "bees"};
 
+        for (String s : arr) {
+
+            s=s.substring(0,1).toUpperCase()+s.substring(1);
+
+        }
+        System.out.println("");
+
 
 
     }
