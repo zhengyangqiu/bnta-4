@@ -1,38 +1,40 @@
 package com.bnta.exercise.week2_mon;
 
 import java.util.ArrayList;
-
 public class Exercise7 {
     /*
         Write a method that finds the longest string in any given array.
         i.e. [] -> ""
         i.e. ["hello", "ola", "bye", "ciao"] -> hello
         i.e. ["hello", "hello", "ola", "bye", "ciao"] -> hello
-        i.e. ["hello", "bingo", "ola", "bye", "ciao"] -> hello, bingo biiii
+        i.e. ["hello", "bingo", "ola", "bye", "ciao"] -> hello, bingo
     */
     public static void main(String[] args) {
-        String[] array={"www","ola","hello", "bingo", "ola", "bye", "ciao"};
-        findString(array);
-
+        System.out.println(
+                longestWords(new String[]{"Will", "Yang", "Foo", "Suraaj", "Sarina", "Suraaj", "Suraaj"})
+        );
     }
-    public static void findString(String[] array){
-        String longest="";
-        String result="";
 
-//        ArrayList<String> longest = new ArrayList<String>();
-
-        for (int i = 0; i < array.length; i++) {
-            if (array[i].length()>longest.length()){
-                longest=array[i];
-
-            }else if(array[i].length()==longest.length()){
-                System.out.println("");//pass
-
+    static String longestWords(String[] input) {
+        String longest = "";
+        int longestWord = 0;
+        for (String i : input) {
+            if (i.length() > longestWord) {
+                longestWord = i.length();
+                longest = i + ", ";
+            } else if (i.length() == longestWord) {
+                boolean duplicate = false;
+                for (String s : longest.split(",")) {
+                    if (s.equals(i)) {
+                        duplicate = true;
+                        break;
+                    }
+                }
+                if (!duplicate) {
+                    longest += i + ", ";
+                }
             }
         }
-
-
-        System.out.println(longest);
+        return longest.substring(0, longest.length() - 2);
     }
 }
-
