@@ -35,6 +35,11 @@ public class Person {
         count++;
     }
 
+    public Person(String name){
+
+        this.name=name;
+    }
+
     public static int getCount() {
         return count;
     }
