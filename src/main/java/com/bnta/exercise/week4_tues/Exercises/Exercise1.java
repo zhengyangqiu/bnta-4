@@ -19,7 +19,6 @@ public class Exercise1 {
                 map.put(s,count);
             }
         }
-
         int maxValueInMap=Collections.max(map.values());
 
         for (Map.Entry<String, Integer> stringIntegerEntry : map.entrySet()) {
@@ -27,8 +26,6 @@ public class Exercise1 {
                 System.out.println(stringIntegerEntry.getKey());
             }
         }
-
-
 
         //split the string by comma
         //map string integer
