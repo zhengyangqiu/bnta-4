@@ -6,27 +6,9 @@ public class Exercise1 {
 
     public static void main(String[] args) {
         String[] input = {"1,1,1,1,3,4,5,6,7,7,7,7,8,8"};
-        String str=input[input.length-1];
-        String[] Arr= str.split(",");
-        List<String>list= new ArrayList<String>();
-        HashMap<String, Integer> map = new HashMap<String,Integer>();
-        int count =1;
-        for (String s : Arr) {
-            if (map.containsKey(s)){
-                map.put(s,++count);
-            }else{
-                count=1;
-                map.put(s,count);
-            }
-        }
-        int maxValueInMap=Collections.max(map.values());
 
-        for (Map.Entry<String, Integer> stringIntegerEntry : map.entrySet()) {
-            if (stringIntegerEntry.getValue()==maxValueInMap){
-                System.out.println(stringIntegerEntry.getKey());
-            }
-        }
-
+        List result = getKey(input);
+        System.out.println(result);
         //split the string by comma
         //map string integer
         //loop through string
@@ -34,7 +16,6 @@ public class Exercise1 {
         //else map.put(key,1)
         //return map
         //max =2 , list[2,3]
-
 
 
         //Given the follwing array of strings. String[] input = "1,1,1,1,3,4,5,6,7,7,7,8,8";
@@ -66,10 +47,42 @@ public class Exercise1 {
 //            }
 //        }
 
+    }
+
+
+    public static List<String> getKey(String[] input){
+
+        if (input == null){
+            throw new NullPointerException("input is null");
+        }
 
 
 
 
+        String str=input[input.length-1];
+        String[] Arr= str.split(",");
+        List<String>list= new ArrayList<String>();
+        HashMap<String, Integer> map = new HashMap<String,Integer>();
+        int count =1;
+        for (String s : Arr) {
+            if (map.containsKey(s)){
+                map.put(s,++count);
+            }else{
+                count=1;
+                map.put(s,count);
+            }
+        }
+        int maxValueInMap=Collections.max(map.values());
+
+
+
+        for (Map.Entry<String, Integer> stringIntegerEntry : map.entrySet()) {
+            if (stringIntegerEntry.getValue()==maxValueInMap){
+                 list.add(stringIntegerEntry.getKey());
+            }
+        }
+        return list;
 
     }
+
 }
