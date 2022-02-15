@@ -7,6 +7,7 @@ public class PersonService {
     private final PersonDAO personDAO;
 
     public PersonService(PersonDAO personDAO) {
+
         this.personDAO = personDAO;
     }
 
@@ -37,6 +38,7 @@ public class PersonService {
 
 
     public List<Person> getPeople() {
+
         return personDAO.getPeople();
     }
 

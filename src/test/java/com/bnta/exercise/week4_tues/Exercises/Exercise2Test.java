@@ -57,14 +57,9 @@ class Exercise2Test {
 
         //GIVEN
         Exercise2 exercise2 = new Exercise2();
-
-
         String[] input = {"1,3,1,7,3,4,5,6,7,1,7,8,3"};
         //WHEN
-
         Map<String, Integer> expect = exercise2.occurrences(input);
-
-
         //THEN
         Map<String, Integer> result = new HashMap<String, Integer>();
         result.put("1", 3);
@@ -75,9 +70,8 @@ class Exercise2Test {
         result.put("7", 3);
         result.put("8", 1);
         assertThat(expect).isEqualTo(result);
-
-
     }
+
 
 
 

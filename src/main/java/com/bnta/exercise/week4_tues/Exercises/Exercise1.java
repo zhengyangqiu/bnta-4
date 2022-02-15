@@ -58,7 +58,6 @@ public class Exercise1 {
 
 
 
-
         String str=input[input.length-1];
         String[] Arr= str.split(",");
         List<String>list= new ArrayList<String>();
