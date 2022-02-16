@@ -10,6 +10,11 @@ public class Main {
 
         List<Vehicle>vehicles= new ArrayList<>();
 
+        Vehicle car= new Car();
+        Vehicle bicyle = new Bicycle();
+        vehicles.add(car);
+
+
 
     }
 }
