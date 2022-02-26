@@ -11,7 +11,6 @@ public class PersonDateAccessService implements PersonDAO{
         allListOfPeople.add(new Person(2,"ying",18));
         allListOfPeople.add(new Person(3,"qiu",20));
 
-
     }
 
     @Override

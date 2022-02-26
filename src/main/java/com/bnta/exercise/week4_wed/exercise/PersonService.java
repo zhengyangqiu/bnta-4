@@ -7,7 +7,6 @@ public class PersonService {
     private final PersonDAO personDAO;
 
     public PersonService(PersonDAO personDAO) {
-
         this.personDAO = personDAO;
     }
 

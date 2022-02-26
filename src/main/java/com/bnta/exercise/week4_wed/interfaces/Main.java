@@ -11,7 +11,7 @@ public class Main {
         List<Vehicle>vehicles= new ArrayList<>();
 
         Vehicle car= new Car();
-        Vehicle bicyle = new Bicycle();
+        Vehicle bicycle = new Bicycle();
         vehicles.add(car);
 
 
