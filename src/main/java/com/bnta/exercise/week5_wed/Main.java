@@ -5,5 +5,6 @@ public class Main {
         EmailSender emailSender= new GmailEmailService();
         EmailService emailService = new EmailService(emailSender);
         emailService.sendEmail("222","111","222");
+
     }
 }
